@@ -7,42 +7,22 @@ module my_chip (
     input logic reset // Important: Reset is ACTIVE-HIGH
 );
     
-    // Basic counter design as an example
-    // TODO: remove the counter design and use this module to insert your own design
-    // DO NOT change the I/O header of this design
+InlineVGA inline_vga(
+    .i_rstn(!reset), // designed for active low
+    .i_clk(clock),
+    .i_hsync(io_in[11]),
+    .i_vsync(io_in[10]),
+    .i_red(io_in[9:7]),
+    .i_green(io_in[6:4]),
+    .i_blue(io_in[3:1]),
+    .i_cmd_bit(io_in[0]),
 
-    wire [6:0] led_out;
-    assign io_out[6:0] = led_out;
-
-    // external clock is 1000Hz, so need 10 bit counter
-    reg [9:0] second_counter;
-    reg [3:0] digit;
-
-    always @(posedge clock) begin
-        // if reset, set counter to 0
-        if (reset) begin
-            second_counter <= 0;
-            digit <= 0;
-        end else begin
-            // if up to 16e6
-            if (second_counter == 1000) begin
-                // reset
-                second_counter <= 0;
-
-                // increment digit
-                digit <= digit + 1'b1;
-
-                // only count from 0 to 9
-                if (digit == 9)
-                    digit <= 0;
-
-            end else
-                // increment counter
-                second_counter <= second_counter + 1'b1;
-        end
-    end
-
-    // instantiate segment display
-    seg7 seg7(.counter(digit), .segments(led_out));
+    .o_hsync(io_out[11]), 
+    .o_vsync(io_out[10]), 
+    .o_red(io_out[9:7]),
+    .o_green(io_out[6:4]).
+    .o_blue(io_out[3:1]),
+    .o_error(io_out[0])
+);
 
 endmodule

@@ -1,0 +1,12 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1746156527" />
+    <testcase name="test_ResetState" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="42" time="0.0011174678802490234" sim_time_ns="15.001" ratio_time="13424.099488798805" />
+    <testcase name="test_HsyncTranstion" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="55" time="0.0924079418182373" sim_time_ns="8015.001" ratio_time="86734.98015749754" />
+    <testcase name="test_VsyncTranstion" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="68" time="0.07894325256347656" sim_time_ns="5265.001" ratio_time="66693.48967812704" />
+    <testcase name="test_IntermediateResetHsync" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="81" time="0.07432866096496582" sim_time_ns="25.001000000000204" ratio_time="336.3574652822578" />
+    <testcase name="test_IntermediateResetVsync" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="98" time="0.004524946212768555" sim_time_ns="25.000999999998385" ratio_time="5525.148548605997" />
+    <testcase name="test_PixelBufferRE" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="116" time="0.09031939506530762" sim_time_ns="8025.001000000002" ratio_time="88851.35904860005" />
+    <testcase name="test_IntermediateResetRE" classname="tb_OutputMonitor" file="/home/shyacinthe/inlineVGA/smoke_tests/tb_OutputMonitor.py" lineno="133" time="0.08791708946228027" sim_time_ns="7995.001" ratio_time="90937.96267482394" />
+  </testsuite>
+</testsuites>

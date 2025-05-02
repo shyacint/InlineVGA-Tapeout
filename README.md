@@ -65,7 +65,7 @@ Additionally, it is in the expected behavior that InlineVGA will miss the first 
 to synchronize with the incoming signal. If any errors occur the error signal will be asserted, but the ASIC does not have self-handling
 error correct path. The unit must be manually reset usin the provide reset pin. InlineVGA is designed using ACTIVE NEGATIVE reset logic.
 
-| Input/Output| Bit Sequnece             | Description                   |																
+| Input/Output| Bit Sequence             | Description                   |																
 |-------------|--------------------------|-------------------------------|
 | NONE        | 3'b000 / 3'b110 / 3'b111 | Passthrough of src VGA Signal |
 | ISO_BLUE    | 3'b001                   | Block src non-blue channels   |

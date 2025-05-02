@@ -20,7 +20,7 @@ InlineVGA inline_vga(
     .o_hsync(io_out[11]), 
     .o_vsync(io_out[10]), 
     .o_red(io_out[9:7]),
-    .o_green(io_out[6:4]).
+    .o_green(io_out[6:4]),
     .o_blue(io_out[3:1]),
     .o_error(io_out[0])
 );
